@@ -1,4 +1,3 @@
-/* eslint-disable comma-dangle */
 import createElement from '../utils/createElement';
 
 function createContact() {
@@ -14,11 +13,11 @@ function createContact() {
     createElement({
       text: '$ Lowly Road, Missi, New Terkic',
       className: 'main-description',
-    })
+    }),
   );
 
   addressWrapper.append(
-    createElement({ text: '# 98-636874521', className: 'main-description' })
+    createElement({ text: '# 98-636874521', className: 'main-description' }),
   );
 
   wrapper.append(
@@ -26,7 +25,7 @@ function createContact() {
       tag: 'h2',
       text: 'Contact information',
       className: 'main-heading',
-    })
+    }),
   );
   wrapper.append(addressWrapper);
 
@@ -37,4 +36,3 @@ export default function contact() {
   const content = document.getElementById('content');
   content.append(createContact());
 }
-/* eslint-enable comma-dangle */

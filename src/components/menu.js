@@ -1,4 +1,3 @@
-/* eslint-disable object-curly-newline, comma-dangle */
 import createElement from '../utils/createElement';
 import Food1 from '../assets/images/food-1.jpg';
 import Food2 from '../assets/images/food-2.jpg';
@@ -54,19 +53,21 @@ function createMenuHoverCard({ title, price }) {
     createElement({
       tag: 'h3',
       text: title,
-    })
+    }),
   );
 
   container.append(
     createElement({
       text: price,
-    })
+    }),
   );
 
   return container;
 }
 
-function createCard({ src, alt, title, price }) {
+function createCard({
+  src, alt, title, price,
+}) {
   const card = document.createElement('div');
   card.classList.add('menu-card');
 
@@ -91,8 +92,12 @@ function createMenu() {
   wrapper.setAttribute('data-toggle', 'menu');
   wrapper.setAttribute('hidden', '');
 
-  menuCards.forEach(({ src, alt, title, price }) => {
-    wrapper.append(createCard({ src, alt, title, price }));
+  menuCards.forEach(({
+    src, alt, title, price,
+  }) => {
+    wrapper.append(createCard({
+      src, alt, title, price,
+    }));
   });
 
   return wrapper;
@@ -102,4 +107,3 @@ export default function menu() {
   const content = document.getElementById('content');
   content.append(createMenu());
 }
-/* eslint-enable object-curly-newline, comma-dangle */

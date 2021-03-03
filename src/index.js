@@ -1,4 +1,3 @@
-/* eslint-disable comma-dangle */
 import './stylesheets/index.scss';
 import hero from './components/hero';
 import nav from './components/nav';
@@ -21,7 +20,7 @@ function showActiveTab(event) {
   const currentButton = document.querySelectorAll('.nav-button.active');
   currentButton[0].className = currentButton[0].className.replace(
     ' active',
-    ''
+    '',
   );
   event.currentTarget.classList.add('active');
 }
@@ -41,4 +40,3 @@ function init() {
 }
 
 init();
-/* eslint-enable comma-dangle */

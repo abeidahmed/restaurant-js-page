@@ -1,4 +1,3 @@
-/* eslint-disable comma-dangle */
 import createElement from '../utils/createElement';
 
 function createHero() {
@@ -10,7 +9,7 @@ function createHero() {
       tag: 'h1',
       className: 'hero-heading',
       text: 'Star foods',
-    })
+    }),
   );
 
   return wrapper;
@@ -20,4 +19,3 @@ export default function hero() {
   const content = document.getElementById('content');
   content.append(createHero());
 }
-/* eslint-enable comma-dangle */
