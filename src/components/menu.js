@@ -102,4 +102,4 @@ export default function menu() {
   const content = document.getElementById('content');
   content.append(createMenu());
 }
-/* eslint-enable object-curly-newline, comma-dangle*/
+/* eslint-enable object-curly-newline, comma-dangle */
