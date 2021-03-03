@@ -82,6 +82,8 @@ function createCard({ src, alt, title, price }) {
 function createMenu() {
   const wrapper = document.createElement('div');
   wrapper.classList.add('main', 'menu-grid');
+  wrapper.setAttribute('data-toggle', 'menu');
+  wrapper.setAttribute('hidden', '');
 
   menuCards.forEach(({ src, alt, title, price }) => {
     wrapper.append(createCard({ src, alt, title, price }));

@@ -1,6 +1,7 @@
-function createButton(text) {
+function createButton(id, text, isActive = false) {
   const btn = document.createElement('button');
-  btn.classList.add('nav-button');
+  btn.classList.add('nav-button', `${isActive ? 'active' : null}`);
+  btn.setAttribute('data-target', id);
   btn.textContent = text;
 
   return btn;
@@ -10,9 +11,9 @@ function createNav() {
   const nav = document.createElement('nav');
   nav.classList.add('nav');
 
-  const homeBtn = createButton('Home');
-  const menuBtn = createButton('Menu');
-  const contactBtn = createButton('Contact');
+  const homeBtn = createButton('home', 'Home', true);
+  const menuBtn = createButton('menu', 'Menu');
+  const contactBtn = createButton('contact', 'Contact');
 
   nav.append(homeBtn);
   nav.append(menuBtn);

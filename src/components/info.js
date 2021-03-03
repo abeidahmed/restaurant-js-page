@@ -1,6 +1,7 @@
 function createInfo() {
   const wrapper = document.createElement('div');
   wrapper.classList.add('main');
+  wrapper.setAttribute('data-toggle', 'home');
 
   const heading = document.createElement('h2');
   heading.textContent = 'About';
