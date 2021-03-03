@@ -3,6 +3,10 @@
 > This project was meant to enhance the knowledge on DOM manipulation by
 > dynamically rendering a simple restaurant homepage.
 
+## Live demo
+
+Click [here](https://abeidahmed.github.io/restaurant-js-page/)
+
 ## Features
 
 - About page
