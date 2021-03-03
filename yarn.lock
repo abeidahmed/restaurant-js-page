@@ -876,6 +876,11 @@ sass@^1.32.8:
   dependencies:
     chokidar ">=2.0.0 <4.0.0"
 
+sassy-lib@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/sassy-lib/-/sassy-lib-1.0.1.tgz#636d0b2709f5b247faaa959ffb0a6f1cc3231c0b"
+  integrity sha512-BmKoQNlkoMQ5T+e1OiGA9qrdKc/yxosebzVU15eb1b+L2ijuNgBxtwcqnoAaKCyKp08ImMpGUYtVvLohoDHMQg==
+
 schema-utils@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/schema-utils/-/schema-utils-3.0.0.tgz#67502f6aa2b66a2d4032b4279a2944978a0913ef"
