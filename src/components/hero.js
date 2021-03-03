@@ -1,5 +1,4 @@
-const HEADLINE = 'The best restaurant in town';
-const DESCRIPTION = 'All the best foods that you can taste in town.';
+const HEADLINE = 'Star foods';
 
 function createHero() {
   const wrapper = document.createElement('section');
@@ -8,14 +7,9 @@ function createHero() {
   const headline = document.createElement('h1');
   headline.classList.add('hero-headline');
 
-  const tagLine = document.createElement('p');
-  tagLine.classList.add('hero-tagline');
-
   headline.innerText = HEADLINE;
-  tagLine.innerText = DESCRIPTION;
 
   wrapper.append(headline);
-  wrapper.append(tagLine);
 
   return wrapper;
 }

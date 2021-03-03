@@ -8,6 +8,11 @@
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
 
+@font-face {
+  font-family: 'sw';
+  src: url('../assets/fonts/sw.ttf');
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -28,7 +33,7 @@ html {
 
 body {
   margin: 0;
-  font-family: 'Inter';
+  font-family: 'sw';
 }
 
 /**
