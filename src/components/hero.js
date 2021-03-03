@@ -1,7 +1,7 @@
 const HEADLINE = 'The best restaurant in town';
 const DESCRIPTION = 'All the best foods that you can taste in town.';
 
-function createHome() {
+function createHero() {
   const wrapper = document.createElement('section');
   wrapper.classList.add('hero-wrapper');
 
@@ -22,5 +22,5 @@ function createHome() {
 
 export default function hero() {
   const content = document.getElementById('content');
-  content.append(createHome());
+  content.append(createHero());
 }
