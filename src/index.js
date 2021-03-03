@@ -3,6 +3,7 @@ import hero from './components/hero';
 import nav from './components/nav';
 import info from './components/info';
 import menu from './components/menu';
+import contact from './components/contact';
 
 function showActiveTab(event) {
   const panels = document.querySelectorAll('.main');
@@ -29,6 +30,7 @@ function init() {
   nav();
   info();
   menu();
+  contact();
 
   const toggleButtons = document.querySelectorAll('.nav-button');
 
