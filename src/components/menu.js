@@ -95,9 +95,14 @@ function createMenu() {
   menuCards.forEach(({
     src, alt, title, price,
   }) => {
-    wrapper.append(createCard({
-      src, alt, title, price,
-    }));
+    wrapper.append(
+      createCard({
+        src,
+        alt,
+        title,
+        price,
+      }),
+    );
   });
 
   return wrapper;
