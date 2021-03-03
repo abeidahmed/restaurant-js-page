@@ -10,11 +10,16 @@
   border: 0;
   border-top: 4px solid rgba(235, 235, 235, 0.4);
   border-bottom: 4px solid rgba(235, 235, 235, 0.4);
-  font-size: 28px;
+  font-size: 20px;
   color: #fff;
   line-height: 28px;
   padding: 16px 0;
   text-shadow: 2px 10px 15px rgb(0 0 0);
+  letter-spacing: 0.1em;
+
+  @include breakpoint(md) {
+    font-size: 28px;
+  }
 
   &:hover:not(.active) {
     color: #e5e7eb;
