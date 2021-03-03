@@ -6,4 +6,21 @@ module.exports = {
     filename: 'main.js',
     path: path.join(__dirname, 'dist'),
   },
+  module: {
+    rules: [
+      {
+        test: /\.scss$/,
+        use: [
+          'style-loader',
+          'css-loader',
+          {
+            loader: 'sass-loader',
+            options: {
+              implementation: require('sass'),
+            },
+          },
+        ],
+      },
+    ],
+  },
 };
