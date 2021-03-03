@@ -1,3 +1,4 @@
+/* esline-disable */
 const path = require('path');
 
 module.exports = {
@@ -33,3 +34,4 @@ module.exports = {
     ],
   },
 };
+/* esline-enable */

@@ -1,4 +1,5 @@
-import { createElement } from '../utils/createElement';
+/* esline-disable comma-dangle */
+import createElement from '../utils/createElement';
 
 function createInfo() {
   const wrapper = document.createElement('div');
@@ -28,3 +29,4 @@ export default function info() {
   const content = document.getElementById('content');
   content.append(createInfo());
 }
+/* esline-enable comma-dangle */
