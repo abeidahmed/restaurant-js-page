@@ -1,4 +1,4 @@
-/* esline-disable comma-dangle */
+/* eslint-disable comma-dangle */
 import createElement from '../utils/createElement';
 
 function createHero() {
@@ -20,4 +20,4 @@ export default function hero() {
   const content = document.getElementById('content');
   content.append(createHero());
 }
-/* esline-enable comma-dangle */
+/* eslint-enable comma-dangle */

@@ -1,4 +1,4 @@
-/* esline-disable comma-dangle */
+/* eslint-disable comma-dangle */
 import createElement from '../utils/createElement';
 
 function createContact() {
@@ -37,4 +37,4 @@ export default function contact() {
   const content = document.getElementById('content');
   content.append(createContact());
 }
-/* esline-enable comma-dangle */
+/* eslint-enable comma-dangle */

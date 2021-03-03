@@ -1,4 +1,4 @@
-/* esline-disable comma-dangle */
+/* eslint-disable comma-dangle */
 import createElement from '../utils/createElement';
 
 function createInfo() {
@@ -29,4 +29,4 @@ export default function info() {
   const content = document.getElementById('content');
   content.append(createInfo());
 }
-/* esline-enable comma-dangle */
+/* eslint-enable comma-dangle */

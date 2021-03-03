@@ -1,4 +1,4 @@
-/* esline-disable object-curly-newline, comma-dangle */
+/* eslint-disable object-curly-newline, comma-dangle */
 import createElement from '../utils/createElement';
 import Food1 from '../assets/images/food-1.jpg';
 import Food2 from '../assets/images/food-2.jpg';
@@ -102,4 +102,4 @@ export default function menu() {
   const content = document.getElementById('content');
   content.append(createMenu());
 }
-/* esline-enable object-curly-newline, comma-dangle*/
+/* eslint-enable object-curly-newline, comma-dangle*/
