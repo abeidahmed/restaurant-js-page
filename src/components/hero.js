@@ -1,15 +1,16 @@
-const HEADLINE = 'Star foods';
+import { createElement } from '../utils/createElement';
 
 function createHero() {
   const wrapper = document.createElement('section');
   wrapper.classList.add('hero-wrapper');
 
-  const headline = document.createElement('h1');
-  headline.classList.add('hero-headline');
-
-  headline.innerText = HEADLINE;
-
-  wrapper.append(headline);
+  wrapper.append(
+    createElement({
+      tag: 'h1',
+      className: 'hero-heading',
+      text: 'Star foods',
+    })
+  );
 
   return wrapper;
 }

@@ -1,3 +1,4 @@
+import { createElement } from '../utils/createElement';
 import Food1 from '../assets/images/food-1.jpg';
 import Food2 from '../assets/images/food-2.jpg';
 import Food3 from '../assets/images/food-3.jpg';
@@ -48,14 +49,18 @@ function createMenuHoverCard({ title, price }) {
   const container = document.createElement('div');
   container.classList.add('menu-hover-card');
 
-  const menuName = document.createElement('h3');
-  menuName.textContent = title;
+  container.append(
+    createElement({
+      tag: 'h3',
+      text: title,
+    })
+  );
 
-  const menuPrice = document.createElement('p');
-  menuPrice.textContent = price;
-
-  container.append(menuName);
-  container.append(menuPrice);
+  container.append(
+    createElement({
+      text: price,
+    })
+  );
 
   return container;
 }

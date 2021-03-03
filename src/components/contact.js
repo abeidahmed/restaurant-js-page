@@ -1,28 +1,32 @@
+import { createElement } from '../utils/createElement';
+
 function createContact() {
   const wrapper = document.createElement('div');
   wrapper.classList.add('main');
   wrapper.setAttribute('data-toggle', 'contact');
   wrapper.setAttribute('hidden', '');
 
-  const heading = document.createElement('h2');
-  heading.textContent = 'Contact information';
-  heading.classList.add('main-heading');
-
   const addressWrapper = document.createElement('div');
   addressWrapper.classList.add('address');
 
-  const address = document.createElement('p');
-  address.classList.add('main-description');
-  address.textContent = '$ Lowly Road, Missi, New Terkic';
+  addressWrapper.append(
+    createElement({
+      text: '$ Lowly Road, Missi, New Terkic',
+      className: 'main-description',
+    })
+  );
 
-  const phoneNumber = document.createElement('p');
-  phoneNumber.classList.add('main-description');
-  phoneNumber.textContent = '# 98-636874521';
+  addressWrapper.append(
+    createElement({ text: '# 98-636874521', className: 'main-description' })
+  );
 
-  addressWrapper.append(address);
-  addressWrapper.append(phoneNumber);
-
-  wrapper.append(heading);
+  wrapper.append(
+    createElement({
+      tag: 'h2',
+      text: 'Contact information',
+      className: 'main-heading',
+    })
+  );
   wrapper.append(addressWrapper);
 
   return wrapper;
