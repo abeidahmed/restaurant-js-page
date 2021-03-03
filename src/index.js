@@ -17,7 +17,10 @@ function showActiveTab(event) {
   });
 
   const currentButton = document.querySelectorAll('.nav-button.active');
-  currentButton[0].className = currentButton[0].className.replace('active', '');
+  currentButton[0].className = currentButton[0].className.replace(
+    ' active',
+    ''
+  );
   event.currentTarget.classList.add('active');
 }
 
