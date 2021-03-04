@@ -18,7 +18,10 @@
   },
   "homepage": "https://github.com/abeidahmed/restaurant-js-page#readme",
   "devDependencies": {
+    "@babel/core": "^7.13.8",
+    "@babel/preset-env": "^7.13.9",
     "babel-eslint": "10.1.x",
+    "babel-loader": "^8.2.2",
     "css-loader": "^5.1.1",
     "eslint": "6.8.x",
     "eslint-config-airbnb-base": "14.1.x",
