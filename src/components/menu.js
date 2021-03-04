@@ -45,7 +45,7 @@ const menuCards = [
   },
 ];
 
-function createMenuHoverCard({ title, price }) {
+const createMenuHoverCard = ({ title, price }) => {
   const container = document.createElement('div');
   container.classList.add('menu-hover-card');
 
@@ -63,11 +63,11 @@ function createMenuHoverCard({ title, price }) {
   );
 
   return container;
-}
+};
 
-function createCard({
+const createCard = ({
   src, alt, title, price,
-}) {
+}) => {
   const card = document.createElement('div');
   card.classList.add('menu-card');
 
@@ -84,9 +84,9 @@ function createCard({
   card.append(createMenuHoverCard({ title, price }));
 
   return card;
-}
+};
 
-function createMenu() {
+const createMenu = () => {
   const wrapper = document.createElement('div');
   wrapper.classList.add('main', 'menu-grid');
   wrapper.setAttribute('data-toggle', 'menu');
@@ -106,9 +106,11 @@ function createMenu() {
   });
 
   return wrapper;
-}
+};
 
-export default function menu() {
+const menu = () => {
   const content = document.getElementById('content');
   content.append(createMenu());
-}
+};
+
+export default menu;

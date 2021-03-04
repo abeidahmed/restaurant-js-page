@@ -5,7 +5,7 @@ import info from './components/info';
 import menu from './components/menu';
 import contact from './components/contact';
 
-function showActiveTab(event) {
+const showActiveTab = (event) => {
   const panels = document.querySelectorAll('.main');
 
   panels.forEach((panel) => {
@@ -23,9 +23,9 @@ function showActiveTab(event) {
     '',
   );
   event.currentTarget.classList.add('active');
-}
+};
 
-function init() {
+const init = () => {
   hero();
   nav();
   info();
@@ -37,6 +37,6 @@ function init() {
   toggleButtons.forEach((button) => {
     button.addEventListener('click', showActiveTab);
   });
-}
+};
 
 init();

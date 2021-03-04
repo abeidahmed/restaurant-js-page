@@ -1,13 +1,13 @@
-function createButton(id, text, isActive = false) {
+const createButton = (id, text, isActive = false) => {
   const btn = document.createElement('button');
   btn.classList.add('nav-button', `${isActive ? 'active' : null}`);
   btn.setAttribute('data-target', id);
   btn.textContent = text;
 
   return btn;
-}
+};
 
-function createNav() {
+const createNav = () => {
   const nav = document.createElement('nav');
   nav.classList.add('nav');
 
@@ -20,9 +20,11 @@ function createNav() {
   nav.append(contactBtn);
 
   return nav;
-}
+};
 
-export default function nav() {
+const nav = () => {
   const content = document.getElementById('content');
   content.append(createNav());
-}
+};
+
+export default nav;

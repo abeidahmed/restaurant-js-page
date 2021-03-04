@@ -1,6 +1,6 @@
 import createElement from '../utils/createElement';
 
-function createHero() {
+const createHero = () => {
   const wrapper = document.createElement('section');
   wrapper.classList.add('hero-wrapper');
 
@@ -13,9 +13,11 @@ function createHero() {
   );
 
   return wrapper;
-}
+};
 
-export default function hero() {
+const hero = () => {
   const content = document.getElementById('content');
   content.append(createHero());
-}
+};
+
+export default hero;

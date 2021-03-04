@@ -1,6 +1,6 @@
 import createElement from '../utils/createElement';
 
-function createContact() {
+const createContact = () => {
   const wrapper = document.createElement('div');
   wrapper.classList.add('main');
   wrapper.setAttribute('data-toggle', 'contact');
@@ -30,9 +30,11 @@ function createContact() {
   wrapper.append(addressWrapper);
 
   return wrapper;
-}
+};
 
-export default function contact() {
+const contact = () => {
   const content = document.getElementById('content');
   content.append(createContact());
-}
+};
+
+export default contact;
