@@ -21,7 +21,7 @@ Click [here](https://abeidahmed.github.io/restaurant-js-page/)
 - Run `yarn install` or `npm install` to install all the dependencies
 - Run `yarn watch` or `npm watch` to start the webpack-server
 
-## Authors
+## Author
 
 ### Abeid Ahmed
 
