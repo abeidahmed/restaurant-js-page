@@ -1,4 +1,4 @@
-export default function createElement({ tag = 'p', text, className }) {
+const createElement = ({ tag = 'p', text, className }) => {
   const element = document.createElement(tag);
 
   if (className) {
@@ -10,4 +10,6 @@ export default function createElement({ tag = 'p', text, className }) {
   }
 
   return element;
-}
+};
+
+export default createElement;
