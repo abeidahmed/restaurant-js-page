@@ -1,6 +1,6 @@
 import createElement from '../utils/createElement';
 
-const createContact = () => {
+const createContact = (): HTMLElement => {
   const wrapper = document.createElement('div');
   wrapper.classList.add('main');
   wrapper.setAttribute('data-toggle', 'contact');
@@ -32,7 +32,7 @@ const createContact = () => {
   return wrapper;
 };
 
-const contact = () => {
+const contact = (): void => {
   const content = document.getElementById('content');
   content.append(createContact());
 };

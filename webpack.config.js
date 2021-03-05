@@ -2,14 +2,18 @@
 const path = require('path');
 
 module.exports = {
-  mode: 'production',
-  entry: './src/index.js',
+  entry: './src/index.ts',
   output: {
     filename: 'main.js',
     path: path.join(__dirname, 'dist'),
   },
   module: {
     rules: [
+      {
+        test: /\.ts$/,
+        use: 'ts-loader',
+        exclude: '/node_modules',
+      },
       {
         test: /\.scss$/,
         use: [
@@ -25,23 +29,28 @@ module.exports = {
       },
       {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
-        type: 'asset/resource',
+        loader: 'file-loader',
+        options: {
+          name: '[name].[ext]',
+        },
       },
       {
         test: /\.(woff|woff2|eot|ttf|otf)$/i,
         type: 'asset/resource',
       },
       {
-        test: /\.m?js$/,
-        exclude: /(node_modules|bower_components)/,
-        use: {
-          loader: 'babel-loader',
-          options: {
-            presets: ['@babel/preset-env'],
-          },
-        },
+        test: /\.ts$/,
+        loader: 'babel-loader',
+      },
+      {
+        test: /\.js$/,
+        use: ['source-map-loader'],
+        enforce: 'pre',
       },
     ],
+  },
+  resolve: {
+    extensions: ['.ts', '.js'],
   },
 };
 /* eslint-enable */

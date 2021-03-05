@@ -6,7 +6,14 @@ import Food4 from '../assets/images/food-4.jpg';
 import Food5 from '../assets/images/food-5.jpg';
 import Food6 from '../assets/images/food-6.jpg';
 
-const menuCards = [
+type menuCardsType = {
+  src: undefined;
+  alt: string;
+  title: string;
+  price: string;
+};
+
+const menuCards: menuCardsType[] = [
   {
     src: Food1,
     alt: 'Good food',
@@ -45,7 +52,13 @@ const menuCards = [
   },
 ];
 
-const createMenuHoverCard = ({ title, price }) => {
+const createMenuHoverCard = ({
+  title,
+  price,
+}: {
+  title: string;
+  price: string;
+}): HTMLElement => {
   const container = document.createElement('div');
   container.classList.add('menu-hover-card');
 
@@ -66,8 +79,16 @@ const createMenuHoverCard = ({ title, price }) => {
 };
 
 const createCard = ({
-  src, alt, title, price,
-}) => {
+  src,
+  alt,
+  title,
+  price,
+}: {
+  src: undefined;
+  alt: string;
+  title: string;
+  price: string;
+}): HTMLElement => {
   const card = document.createElement('div');
   card.classList.add('menu-card');
 
@@ -86,15 +107,13 @@ const createCard = ({
   return card;
 };
 
-const createMenu = () => {
+const createMenu = (): HTMLElement => {
   const wrapper = document.createElement('div');
   wrapper.classList.add('main', 'menu-grid');
   wrapper.setAttribute('data-toggle', 'menu');
   wrapper.setAttribute('hidden', '');
 
-  menuCards.forEach(({
-    src, alt, title, price,
-  }) => {
+  menuCards.forEach(({ src, alt, title, price }) => {
     wrapper.append(
       createCard({
         src,
@@ -108,7 +127,7 @@ const createMenu = () => {
   return wrapper;
 };
 
-const menu = () => {
+const menu = (): void => {
   const content = document.getElementById('content');
   content.append(createMenu());
 };

@@ -1,4 +1,14 @@
-const createElement = ({ tag = 'p', text, className }) => {
+type elementType = {
+  tag?: string;
+  text?: string;
+  className?: string;
+};
+
+const createElement = ({
+  tag = 'p',
+  text,
+  className,
+}: elementType): HTMLElement => {
   const element = document.createElement(tag);
 
   if (className) {

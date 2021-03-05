@@ -5,8 +5,8 @@ import info from './components/info';
 import menu from './components/menu';
 import contact from './components/contact';
 
-const showActiveTab = (event) => {
-  const panels = document.querySelectorAll('.main');
+const showActiveTab = (event): void => {
+  const panels = document.querySelectorAll('.main') as NodeListOf<HTMLElement>;
 
   panels.forEach((panel) => {
     const panelTarget = panel.dataset.toggle;
@@ -25,7 +25,7 @@ const showActiveTab = (event) => {
   event.currentTarget.classList.add('active');
 };
 
-const init = () => {
+const init = (): void => {
   hero();
   nav();
   info();

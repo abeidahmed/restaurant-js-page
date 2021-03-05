@@ -1,6 +1,6 @@
 import createElement from '../utils/createElement';
 
-const createInfo = () => {
+const createInfo = (): HTMLElement => {
   const wrapper = document.createElement('div');
   wrapper.classList.add('main');
   wrapper.setAttribute('data-toggle', 'home');
@@ -24,7 +24,7 @@ const createInfo = () => {
   return wrapper;
 };
 
-const info = () => {
+const info = (): void => {
   const content = document.getElementById('content');
   content.append(createInfo());
 };
