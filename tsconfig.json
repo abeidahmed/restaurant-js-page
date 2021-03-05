@@ -11,6 +11,6 @@
     "allowJs": true,
     "moduleResolution": "node"
   },
-  "exlucde": ["node_modules"],
+  "exclude": ["node_modules"],
   "include": ["src", "index.d.ts"]
 }
