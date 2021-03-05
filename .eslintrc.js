@@ -5,6 +5,7 @@ module.exports = {
     sourceType: 'module',
   },
   extends: ['plugin:@typescript-eslint/recommended', 'prettier'],
+  ignorePatterns: ['dist/**'],
   rules: {
     quotes: ['error', 'single'],
   },
