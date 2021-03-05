@@ -5,8 +5,8 @@ import info from './components/info';
 import menu from './components/menu';
 import contact from './components/contact';
 
-const showActiveTab = (event) => {
-  const panels = document.querySelectorAll('.main');
+const showActiveTab = (event: any) => {
+  const panels = document.querySelectorAll('.main') as NodeListOf<HTMLElement>;
 
   panels.forEach((panel) => {
     const panelTarget = panel.dataset.toggle;

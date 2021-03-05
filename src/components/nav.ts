@@ -1,4 +1,8 @@
-const createButton = (id, text, isActive = false) => {
+const createButton = (
+  id: string,
+  text: string,
+  isActive: boolean = false,
+): HTMLButtonElement => {
   const btn = document.createElement('button');
   btn.classList.add('nav-button', `${isActive ? 'active' : null}`);
   btn.setAttribute('data-target', id);
@@ -7,7 +11,7 @@ const createButton = (id, text, isActive = false) => {
   return btn;
 };
 
-const createNav = () => {
+const createNav = (): HTMLElement => {
   const nav = document.createElement('nav');
   nav.classList.add('nav');
 
@@ -22,7 +26,7 @@ const createNav = () => {
   return nav;
 };
 
-const nav = () => {
+const nav = (): void => {
   const content = document.getElementById('content');
   content.append(createNav());
 };
