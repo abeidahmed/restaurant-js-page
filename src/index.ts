@@ -5,12 +5,13 @@ import info from './components/info';
 import menu from './components/menu';
 import contact from './components/contact';
 
-const showActiveTab = (event): void => {
+const showActiveTab = (event: Event): void => {
   const panels = document.querySelectorAll('.main') as NodeListOf<HTMLElement>;
 
   panels.forEach((panel) => {
     const panelTarget = panel.dataset.toggle;
-    if (event.target.dataset.target === panelTarget) {
+    const buttonTarget = event.target as HTMLElement;
+    if (buttonTarget.dataset.target === panelTarget) {
       panel.removeAttribute('hidden');
     } else {
       panel.setAttribute('hidden', '');
@@ -22,7 +23,7 @@ const showActiveTab = (event): void => {
     ' active',
     '',
   );
-  event.currentTarget.classList.add('active');
+  (event.currentTarget as HTMLElement).classList.add('active');
 };
 
 const init = (): void => {
@@ -34,7 +35,7 @@ const init = (): void => {
 
   const toggleButtons = document.querySelectorAll('.nav-button');
 
-  toggleButtons.forEach((button) => {
+  toggleButtons.forEach((button: HTMLButtonElement) => {
     button.addEventListener('click', showActiveTab);
   });
 };
