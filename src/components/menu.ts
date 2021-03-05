@@ -7,7 +7,7 @@ import Food5 from '../assets/images/food-5.jpg';
 import Food6 from '../assets/images/food-6.jpg';
 
 type menuCardsType = {
-  src: any;
+  src: undefined;
   alt: string;
   title: string;
   price: string;
@@ -84,7 +84,7 @@ const createCard = ({
   title,
   price,
 }: {
-  src: any;
+  src: undefined;
   alt: string;
   title: string;
   price: string;
