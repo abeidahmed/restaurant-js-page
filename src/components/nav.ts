@@ -1,7 +1,7 @@
 const createButton = (
   id: string,
   text: string,
-  isActive: boolean = false,
+  isActive = false,
 ): HTMLButtonElement => {
   const btn = document.createElement('button');
   btn.classList.add('nav-button', `${isActive ? 'active' : null}`);
